@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+
+🐶 Admin Dashboard-Dog Crud</title>
+    <style>
+        body{
+            position: relative;
+            top: 0px;
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            background-color: blanchedalmond;
+            background-image: url("/images/background.png");
+            background-size: 1500px 700px;
+            background-repeat:no-repeat;
+            
+        }
+        nav{
+            
+            position: sticky;
+            top: 0px;
+            height: 60px;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center ;
+        }
+
+        .div1{
+            height: 60px;
+            width: 120px;
+            position: relative;
+            left: 40px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color:black;  
+            cursor: pointer;
+
+        }
+      
+         
+        
+            
+
+         .drop{
+            position: relative;
+         }
+
+         #dropdown{
+            display: none;
+            background-color: blueviolet;
+            width: 6000px;
+            
+            position: absolute;
+            top: 42px;
+         }
+
+         .drop{
+            height: inherit;
+            display: flex;
+            align-items: center;
+         }
+         .drop:hover #dropdown{
+
+            display: block;
+
+         }
+         .form-wrap{
+       
+       
+        
+        }
+         .form-container{
+         position:absolute;
+       top:70px;
+       left:500px;
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      width: 300px;
+    }
+     .form-container input {
+     
+      background-color: rgba(255, 255, 255, 0.8);
+      
+    }
+    .form-container button
+    {
+    cursor:pointer;
+    background:purple;
+    color:white;
+    border-radius:15px;
+    
+    
+    }
+    .form-container button:hover {
+      background-color: green;
+    }
+   
+        #registerForm input {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+       
+          .d a:hover {
+  color: yellow !important;
+} 
+#msg{
+      display:inline;color:black;background:white;
+      } 
+       .form-containe{
+     
+       
+       position:absolute;
+       top:70px;
+       left:60px;
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      width: 300px;
+    }
+    .form-containe button
+    {
+    cursor:pointer;
+    background:purple;
+    color:white;
+    border-radius:15px;
+    }
+    </style>
+</head>
+<body>
+<center>
+		<p th:text="${pass}"></p>
+		</center>
+    <nav>
+        <div class="div1">
+            <img src="/images/msLogo.jpg" height="50px" width="50px">
+            <pre style="color: white; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-weight: 200;">PAWS
+And
+CARES</pre>
+        </div>
+        <div class="div1" style="width: 900px;">
+        <div class="d"><a href="/admin/DogCrud" style="color:yellow;text-decoration:underline;">Manage Dogs</a></div>
+            <div class="d"><a href="/admin/viewAdoption" style="color:white;text-decoration:none;">Pending Adoption</a></div>
+            <div class="d"><a href="/admin/viewVolunteer" style="color:white;text-decoration:none;">Pending Volunteer</a></div>
+            <div class="d"><a href="/admin/viewDonation" style="color:white;text-decoration:none;">View Donation</a></div>
+            <div class="d"><a href="/admin/viewSponsors" style="color:white;text-decoration:none;">View Sponsors</a></div>
+           <div class="d"> <a href="/" style="color:red;text-decoration:none;">Logout</a></div>
+        </div>
+
+    </nav>
+    
+   
+    
+       
+       <br><br>
+       <div class="form-container">
+       <img src="/images/dog.jpg" height="300px" width="300px" id="img1">
+       <br><br>
+         <a href="/admin/viewDog"><button>View Dogs</button></a>
+         <a href="/admin/addDogs"><button>add Dogs</button></a>
+         <a href="/admin/dashboard"> <button>Back</button> </a>
+		
+    </div>
+     
+    
+    
+    
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏠User Home Page</title>
+    <style>
+        body{
+            position: relative;
+           
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            background-color: blanchedalmond;
+            background-image: url("/images/background.png");
+            background-size: 1500px 700px;
+            background-repeat:no-repeat;
+            
+        }
+        nav{
+            
+            position: sticky;
+            top: 0px;
+            height: 60px;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center ;
+        }
+
+        .div1{
+            height: 60px;
+            width: 120px;
+            position: relative;
+            left: 40px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color:black;  
+            cursor: pointer;
+
+        }
+      
+         
+        
+            
+
+         .drop{
+            position: relative;
+         }
+
+         #dropdown{
+            display: none;
+            background-color: blueviolet;
+            width: 6000px;
+            
+            position: absolute;
+            top: 42px;
+         }
+
+         .drop{
+            height: inherit;
+            display: flex;
+            align-items: center;
+         }
+         .drop:hover #dropdown{
+
+            display: block;
+
+         }
+         .d a:hover {
+  color: yellow !important;
+} 
+     .dd a:hover{
+    color: yellow  !important;
+}
+         #msg{
+      display:inline;color:black;background:white;
+      }
+    </style>
+</head>
+<body>
+
+  <center>
+		<p th:text="${message}"></p>
+		</center>
+		<p th:text="${Welcome}"></p>
+    <nav>
+        <div class="div1">
+            <img src="/images/msLogo.jpg" height="50px" width="50px">
+            <pre style="color: white; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-weight: 200;">PAWS
+And
+CARES</pre>
+        </div>
+        <div class="div1" style="width: 900px;">
+            <div class="d"><a href="/user/UserHome" style="color:white;text-decoration:none;">Home</a></div>
+            <div class="d"><a href="/user/about" style="color:white;text-decoration:none;">About Me</a></div>
+            <div class="d"><a href="/user/work" style="color:white;text-decoration:none;">My Work</a></div>
+            <div class="d"><a href="/user/adopt" style="color:white;text-decoration:none;">Adopt</a></div>
+            <div class="drop">Donation
+            <ul  id="dropdown">
+                <li  class="dd"><a href="/user/donation" style="color:white;text-decoration:none;">One-Time Donation</a></li>
+                <li  class="dd"><a href="/user/donation" style="color:white;text-decoration:none;">Monthly Support</a></li>
+                <li  class="dd"><a href="/user/sponsorDog" style="color:white;text-decoration:none;">Sponsor a Dog</a></li>
+                <li  class="dd"><a href="/user/donation" style="color:white;text-decoration:none;">Medical Care Fund</a></li>
+                <li  class="dd"><a href="/user/donation" style="color:white;text-decoration:none;">Food & Shelter Fund</a></li>
+            </ul>
+            </div>
+            <div class="d"><a href="/user/volunteer" style="color:white;text-decoration:none;">Volunteer</a></div>
+           <div class="d"> <a href="/" style="color:red;text-decoration:none;">Logout</a></div>
+        </div>
+
+    </nav>
+    <!-- <img src="background.png" height="500px" width="1000px" id="img1" -->
+    
+    
+</body>
+</html>

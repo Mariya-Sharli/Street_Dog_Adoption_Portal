@@ -1,0 +1,159 @@
+
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>💼My Work</title>
+   <style>
+   @charset "UTF-8";
+
+
+body{
+	 background-image:url("https://wallpaperaccess.com/full/266770.jpg") ; 
+	 background-repeat:no-repeat;
+	 background-size:1500px 750px;
+}
+table {
+	 background-color: F7F1DE; 
+    width: 900px; 
+    border-collapse: collapse; 
+    margin-top: 20px;
+    font-size: 1em;
+    text-align: left;
+}
+
+
+th {
+    background-color: B5828C; 
+    color: white;
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+td {
+    padding: 10px 15px;
+    border: 1px solid #ddd; 
+    vertical-align: middle; 
+
+
+}
+tr:hover {
+    background-color:E5989B; 
+}
+
+
+td img {
+    display: block;
+    margin: 0 auto;
+    max-width: 80px; /* Control image size */
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+.action-button {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 2px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+    text-decoration: none; 
+    color: white;
+}
+
+
+.on{
+width:150px;
+height:40px;
+ cursor:pointer;
+    background:purple;
+    color:white;
+    border-radius:15px;
+}
+
+.on:hover
+{
+background:green;
+}
+.back-button {
+    display: block;
+    width: 100px;
+    margin: 20px auto 0;
+    padding: 10px;
+    text-align: center;
+    background-color: #6c757d; /* Grey*/
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+   background:green;
+}
+   
+   </style>
+</head>
+
+<body align="center">
+
+    <div class="center">
+<h1 style="font-size:40px">🙋‍♀️🐶🎉</h1>
+<pre style="color:#f5f5f5; font-size:22px;">
+   I'm happy to share that these lovely dogs have found their forever homes!  
+    Your love and support make a huge difference 
+   
+</pre>
+<h3 style="color: #ffd700; font-style: italic;">
+    "🐶❤️Kindly consider adopting and giving a second chance to a street dog in need"
+</pre>
+</h3>
+    
+<center>
+  <table>
+    <thead>
+      <tr>
+      
+        <th>User Name</th>
+        <th>Dog ID</th>
+        <th>Dog Name</th>
+      
+        <th>Status</th>
+        
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr th:each="vol : ${app}">
+       
+        <td th:text="${vol.user.name}"></td>
+        <td th:text="${vol.dog.id}"></td>
+        <td th:text="${vol.dog.name}"></td>
+       
+        <td th:text="${vol.status}"></td>
+        
+      </tr>
+    </tbody>
+  </table>
+</center>
+        <br><br>
+        <a href="/user/UserHome"><button class="on">Stop</button></a>
+        <a href="/user/adopt"><button class="on">Adopt</button></a>
+    </div>
+    <div style="color: white; font-style: bold;font-size:20px">
+    “Give life to a street dog — adopt, don’t stop.” 🐶❤️</div>
+    
+</body>
+
+</html>
+
+

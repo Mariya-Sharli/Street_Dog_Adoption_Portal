@@ -1,0 +1,150 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>🐶 View Dog</title>
+   <style>
+   @charset "UTF-8";
+
+
+body{
+	 background-image:url("https://wallpaperaccess.com/full/266770.jpg") ; 
+	 background-repeat:no-repeat;
+	 background-size:1500px 750px;
+}
+table {
+	 background-color: F7F1DE; 
+    width: 900px; 
+    border-collapse: collapse; 
+    margin-top: 20px;
+    font-size: 1em;
+    text-align: left;
+}
+
+
+th {
+    background-color: B5828C; 
+    color: white;
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+td {
+    padding: 10px 15px;
+    border: 1px solid #ddd; 
+    vertical-align: middle; 
+
+
+}
+tr:hover {
+    background-color:E5989B; 
+}
+
+
+td img {
+    display: block;
+    margin: 0 auto;
+    max-width: 80px; /* Control image size */
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+.action-button {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 2px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+    text-decoration: none; 
+    color: white;
+}
+
+.edit-button {
+    background-color: #ffc107; /* Yellow*/
+}
+
+.delete-button {
+    background-color: #dc3545; 
+}
+
+.edit-button:hover {
+    background-color: #e0a800;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+
+.back-button {
+    display: block;
+    width: 100px;
+    margin: 20px auto 0;
+    padding: 10px;
+    text-align: center;
+    background-color: #6c757d; /* Grey*/
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #5a6268;
+}
+   
+   </style>
+</head>
+
+<body align="center">
+    <div class="center">
+        <h1 style="color:white">View Dogs</h1>
+
+        <table border="1" align="center" >
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Image</th>
+                <th>Breed</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Action</th>
+            </tr>
+
+                <!-- forEach loop like in java-->
+                 <!-- for(Product p:products) -->
+            <tr th:each="dog:${dogs}">
+            <td th:text="${dog.id}"></td>
+                <td th:text="${dog.name}"></td>
+                <td><img height="100px" width="100px"
+                        th:src="${dog.imageLink}"
+                        alt="${dog.name}"></td>
+                <td th:text="${dog.breed}"></td>
+                <td th:text="${dog.age}"></td>
+                <td th:text="${dog.gender}"></td>
+                <td>
+                   <a th:href="'/admin/edit/'+${dog.id}" >    <button class="action-button edit-button">Edit</button>  </a> 
+                    <a th:href="'/delete/'+${dog.id}" >   <button class="action-button delete-button">Delete</button> </a>
+                    
+                </td>
+            </tr>
+            
+            
+        </table>
+        
+
+        <br><br>
+        <a href="/admin/DogCrud"><button class="action-button edit-button">Back</button></a>
+    </div>
+</body>
+
+</html>

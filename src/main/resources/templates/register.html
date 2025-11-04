@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>🌟Register</title>
+ <style>
+        body{
+            position: relative;
+           
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            background-color: blanchedalmond;
+            background-image: url("/images/background.png");
+            background-size: 1500px 700px;
+            background-repeat:no-repeat;
+            
+        }
+        nav{
+            
+            position: sticky;
+            top: 0px;
+            height: 60px;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center ;
+        }
+
+        .div1{
+            height: 60px;
+            width: 120px;
+            position: relative;
+            left: 40px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color:black;  
+            cursor: pointer;
+
+        }
+      
+         
+        
+            
+
+         .drop{
+            position: relative;
+         }
+
+         #dropdown{
+            display: none;
+            background-color: blueviolet;
+            width: 6000px;
+            
+            position: absolute;
+            top: 42px;
+         }
+
+         .drop{
+            height: inherit;
+            display: flex;
+            align-items: center;
+         }
+         .drop:hover #dropdown{
+
+            display: block;
+
+         }
+        .form-wrap{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        
+        
+       
+        
+        }
+         .form-container{
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      width: 300px;
+    }
+     .form-container input {
+      background-color: rgba(255, 255, 255, 0.8);
+      
+    }
+    .form-container button
+    {
+    cursor:pointer;
+    background:purple;
+    color:white;
+    border-radius:15px;
+    
+    
+    }
+    .form-container button:hover {
+      background-color: green;
+    }
+   
+        #registerForm input {
+  width: 90%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+       
+        .d a:hover {
+  color: yellow !important;
+}      
+#msg{
+      display:inline;color:red;background:white;
+      }
+    </style>
+</head>
+<body>
+
+<nav>
+        <div class="div1">
+            <img src="/images/msLogo.jpg" height="50px" width="50px">
+            <pre style="color: white; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-weight: 200;">PAWS
+And
+CARES</pre>
+        </div>
+        <div class="div1" style="width: 900px;">
+            <div class="d"><a href="/" style="color:white;text-decoration:none;">Home</a></div>
+            <div class="d" id="reg"><a href="/register" style="color:yellow;text-decoration:underline;">Register</a></div>
+            <div class="d"><a href="/login" style="color:white;text-decoration:none;">Login</a></div>
+      
+           
+        </div>
+
+    </nav>
+    
+    <h1 align="center" style="font-size:medium">User / Admin Registration</h1>
+    <div class="form-wrap">
+<div class="form-container">
+<form id="registerForm" action="/register" method="post">
+	User_Id:<br><br>
+    Name: <input type="text" name="name" required><br><br>
+    Email: <input type="text" name="email" required><br><br>
+    Password: <input type="password" name="password" required><br><br>
+    Phone: <input type="text" name="phone" required maxlength="10"><br><br>
+
+    <input type="hidden" name="role" id="roleField" value="USER">
+
+    <button type="button" onclick="submitForm('USER')">Register as User</button>
+    <button type="button" onclick="submitForm('ADMIN')">Register as Admin</button>
+</form>
+</div>
+</div>
+<center>
+<p id="msg" th:text="${message}"></p>
+</center>
+
+<script>
+function submitForm(role) {
+    document.getElementById("roleField").value = role;
+    document.getElementById("registerForm").submit();
+}
+</script>
+</body>
+</html>
+
+
+

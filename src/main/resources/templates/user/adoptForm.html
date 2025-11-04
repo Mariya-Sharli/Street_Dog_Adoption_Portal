@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐶 Adopt</title>
+    <style>
+        body{
+            position: relative;
+            
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            background-color: blanchedalmond;
+            background-image: url("/images/background.png");
+            background-size: 1500px 700px;
+            background-repeat:no-repeat;
+            
+        }
+        nav{
+            
+            position: sticky;
+            top: 0px;
+            height: 60px;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center ;
+        }
+
+        .div1{
+            height: 60px;
+            width: 120px;
+            position: relative;
+            left: 40px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color:black;  
+            cursor: pointer;
+
+        }
+      
+         
+        
+            
+
+         .drop{
+            position: relative;
+         }
+
+         #dropdown{
+            display: none;
+            background-color: blueviolet;
+            width: 6000px;
+            
+            position: absolute;
+            top: 42px;
+         }
+
+         .drop{
+            height: inherit;
+            display: flex;
+            align-items: center;
+         }
+         .drop:hover #dropdown{
+
+            display: block;
+
+         }
+         .d a:hover {
+  color: yellow !important;
+} 
+     .dd a:hover{
+    color: yellow  !important;
+}
+         #msg{
+      display:inline;color:black;background:white;
+      }
+          .form-wrap{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        
+        
+       
+        
+        }
+         .form-container{
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      width: 300px;
+    }
+     .form-container input {
+      background-color: rgba(255, 255, 255, 0.8);
+      
+    }
+    .form-container button
+    {
+    cursor:pointer;
+    background:purple;
+    color:white;
+    border-radius:15px;
+    
+    
+    }
+    .form-container button:hover {
+      background-color: green;
+    }
+   
+        #registerForm input {
+  width: 90%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+       
+        .d a:hover {
+  color: yellow !important;
+} 
+    </style>
+</head>
+<body>
+  <center>
+		<p th:text="${message}"></p>
+		</center>
+    <nav>
+        <div class="div1">
+            <img src="/images/msLogo.jpg" height="50px" width="50px">
+            <pre style="color: white; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-weight: 200;">PAWS
+And
+CARES</pre>
+        </div>
+        <div class="div1" style="width: 900px;">
+            <div class="d"><a href="/user/UserHome" style="color:white;text-decoration:none;">Home</a></div>
+            <div class="d"><a href="/user/about" style="color:white;text-decoration:none;">About Me</a></div>
+            <div class="d"><a href="/user/work" style="color:white;text-decoration:none;">Our Work</a></div>
+            <div class="d"><a href="/user/adopt" style="color:yellow;text-decoration:underline;">Adopt</a></div>
+            <div class="drop">Donation
+            <ul  id="dropdown">
+                <li  class="dd"><a href="/user/donation" style="color:white;text-decoration:none;">One-Time Donation</a></li>
+                <li  class="dd"><a href="/user/donation" style="color:white;text-decoration:none;">Monthly Support</a></li>
+                <li  class="dd"><a href="/user/sponsorDog" style="color:white;text-decoration:none;">Sponsor a Dog</a></li>
+                <li  class="dd"><a href="/user/donation" style="color:white;text-decoration:none;">Medical Care Fund</a></li>
+                <li  class="dd"><a href="/user/donation" style="color:white;text-decoration:none;">Food & Shelter Fund</a></li>
+            </ul>
+            </div>
+            <div class="d"><a href="/user/volunteer" style="color:white;text-decoration:none;">Volunteer</a></div>
+           <div class="d"> <a href="/" style="color:red;text-decoration:none;">Logout</a></div>
+        </div>
+
+    </nav>
+    <!-- <img src="background.png" height="500px" width="1000px" id="img1" -->
+    <h1 align="center" style="font-size:medium"> Adoption Form</h1>
+	
+	
+	<div class="form-wrap">
+	<div class="form-container">
+		<form    id="registerForm"  th:action="@{/user/adopt}" method="post" th:object="${adoption}">
+		
+		
+	<input type="hidden" name="dog.id" th:value="${dog.id}" />
+<input type="hidden" name="user.id" th:value="${user.id}" />
+	
+       		
+		<label>User ID:</label>
+		<input type="text" th:value="${user.id}" readonly/>
+		<br><br>  
+        <label>Dog Name:</label>
+        <input type="text" th:value="${dog.name}" readonly />
+		<br><br>
+        <label>Adoption Amount:</label>
+        <input type="text" th:field="*{amount}" placeholder="Enter amount" required /><br><br>
+		
+        <button type="submit">Submit Adoption Request</button>
+    </form>
+	</div>
+	</div>
+	<center>
+	<p id="msg" th:text="${message}"></p>
+	</center>
+	
+    
+</body>
+</html>
+

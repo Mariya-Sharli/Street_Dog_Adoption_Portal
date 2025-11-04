@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>🐶 Edit Dog</title>
+   
+   <style>
+    @charset "UTF-8";
+
+
+body{
+	 background-image:url("https://wallpaperaccess.com/full/266770.jpg") ; 
+	 background-repeat:no-repeat;
+	 background-size:1500px 750px;
+}
+.edit-button {
+    background-color: #ffc107; /* Yellow*/
+}
+
+.delete-button {
+    background-color: #dc3545; 
+}
+
+.edit-button:hover {
+    background-color: #e0a800;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+
+.back-button {
+    display: block;
+    width: 100px;
+    margin: 20px auto 0;
+    padding: 10px;
+    text-align: center;
+    background-color: #6c757d; /* Grey*/
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #5a6268;
+}
+   
+
+.center {
+    
+    width: 100%;
+    max-width: 300px; /* **ULTRA SMALL CONTAINER** */
+    background-color:rgba(255,255,255,0.2);
+    padding: 15px; /* Minimal padding */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.8);
+}
+
+
+
+
+
+
+
+button{
+   cursor:pointer;
+    background:purple;
+    color:white;
+    border-radius:15px;
+    
+}
+
+button:hover{
+background:green ;
+}
+
+   
+
+   
+   </style>
+</head>
+<body>
+<center>
+    <div class="center">
+        <h1>Update Dogs</h1>
+        <form action="/admin/edit" method="post">
+            <input type="text" name="id" th:value="${dog.id}" hidden><br><br>
+            
+            Name: <input type="text" name="name" th:value="${dog.name}"><br><br>
+            
+            Breed: <input type="text" name="breed" th:value="${dog.breed}"><br><br>
+            
+            Image Link: <input type="text" name="imageLink" th:value="${dog.imageLink}">
+            <img height="100px" width="100px"
+                 th:src="${dog.imageLink}"
+                 th:alt="${dog.name}">
+            <br><br>
+            
+            Age: <input type="text" name="age" th:value="${dog.age}"><br><br>
+            
+           Gender:<input type="text" name="gender" th:value="${dog.gender}"><br><br>
+            <button>Update</button> <a href="/admin/viewDog"><button>Back</button></a>
+        </form>
+        
+
+      
+        
+    </div>
+    </center>
+
+</body>
+</html>

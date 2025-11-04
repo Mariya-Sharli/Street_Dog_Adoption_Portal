@@ -1,0 +1,156 @@
+
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> 💰View Donation</title>
+   <style>
+   @charset "UTF-8";
+
+
+body{
+	 background-image:url("https://wallpaperaccess.com/full/266770.jpg") ; 
+	 background-repeat:no-repeat;
+	 background-size:1500px 750px;
+}
+table {
+	 background-color: F7F1DE; 
+    width: 900px; 
+    border-collapse: collapse; 
+    margin-top: 20px;
+    font-size: 1em;
+    text-align: left;
+}
+
+
+th {
+    background-color: B5828C; 
+    color: white;
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+td {
+    padding: 10px 15px;
+    border: 1px solid #ddd; 
+    vertical-align: middle; 
+
+
+}
+tr:hover {
+    background-color:E5989B; 
+}
+
+
+td img {
+    display: block;
+    margin: 0 auto;
+    max-width: 80px; /* Control image size */
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+.action-button {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 2px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+    text-decoration: none; 
+    color: white;
+}
+
+.edit-button {
+    background-color: #ffc107; /* Yellow*/
+}
+
+.delete-button {
+    background-color: #dc3545; 
+}
+
+.edit-button:hover {
+    background:green;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+.on{
+ cursor:pointer;
+    background:purple;
+    color:white;
+    border-radius:15px;
+}
+
+.on:hover
+{
+background:green;
+}
+.back-button {
+    display: block;
+    width: 100px;
+    margin: 20px auto 0;
+    padding: 10px;
+    text-align: center;
+    background-color: #6c757d; /* Grey*/
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+   background:green;
+}
+   
+   </style>
+</head>
+
+<body align="center">
+
+    <div class="center">
+        <h1 style="color:white"> List Of Donation</h1>
+
+    
+<center>
+ <table border="1" cellpadding="6">
+    <thead>
+        <tr>
+            <th>Donation ID</th>
+            <th>User Name</th>
+            <th>Type</th>
+            <th>Amount</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="d : ${donations}">
+            <td th:text="${d.id}"></td>
+            <td th:text="${d.user.name}"></td>
+            <td th:text="${d.type}"></td>
+            <td th:text="${d.amount}"></td>
+            <td th:text="${d.date}"></td>
+        </tr>
+    </tbody>
+</table>
+ 
+</center>
+        <br><br>
+        <a href="/admin/dashboard"><button class="action-button edit-button">Back</button></a>
+    </div>
+</body>
+
+</html>
+
+

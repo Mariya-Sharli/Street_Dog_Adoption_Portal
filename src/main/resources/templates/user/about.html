@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mariya Sharli — Portfolio</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+
+      
+body
+  {
+    background-color: rgb(83, 49, 49);
+  background-image:url("https://wallpaperaccess.com/full/266770.jpg") ; 
+	 background-repeat:no-repeat;
+   text-shadow: 20px 10px 10% chartreuse;
+	 background-size:1500px 750px;
+  }
+
+  .nav{
+    display: inline;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .nav-link{
+    color: blanchedalmond;
+    text-decoration: none;
+    font-size: larger;
+  }
+
+  .hero-grid
+  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card{
+   
+   
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .hero-left{
+    padding: 10px;
+    color: blanchedalmond;
+  }
+  button{
+    padding: 10px;
+    border-radius: 18px;
+    color: brown;
+  }
+  .section-title{
+    font-size: x-large;
+    padding-left: 80px;
+    color: blanchedalmond;
+  }
+  .about-text{
+    padding-left: 120px;
+    color: blanchedalmond;
+   
+  }
+  .skill{
+    padding-left: 120px;
+    color: blanchedalmond;
+    font-size: large;
+  }
+  .con{
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  .projects-grid{
+    display: flex;
+    justify-content: space-evenly;
+
+  }
+  .reveal{
+   color: blanchedalmond;
+  }
+
+  input{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width:  100px;
+    height: 20px;
+  }
+  .last{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+
+  .skills-card{
+    border: 1px;
+   
+    background-color:rgb(83, 49, 49);
+  
+  }
+  </style>
+
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      
+      <nav class="nav">
+        <a style="color: blanchedalmond;font-size: xx-large;">Mariya <span style="color: rgb(237, 132, 88);font-size: xx-large;">Sharli</span></a>
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+       
+        <a href="#contact" class="nav-link">Contact</a>
+       
+      </nav>
+    
+    </div>
+  </header>
+
+  <br><br><br><br>
+  <main>
+    <section id="home" class="hero-section">
+      <div class="hero-grid">
+        <div class="hero-left" style="padding-left: 140px;">
+          <h1 class="reveal">Hi, I'm <span class="accent">Mariya Sharli</span></h1>
+          <p class="leadreveal" style="text-wrap: initial;">Java Full Stack Developer — building responsive, user-friendly web apps using Java, Spring Boot and modern front-end technologies.</p>
+          <div class="hero-ctas reveal">
+            <a class="btn btn-primary" href="https://github.com/Mariya-Sharli/mariya-portfolio/blob/main/Mariya_Sharli_P_Resume.pdf" target="_blank"><button >Resume</button></a>
+            <a class="btn btn-ghost" href="#projects"><button >View Projects details</button></a>
+          </div>
+          <div class="hero-tags reveal">
+            <span>Java</span><span>Spring Boot || </span><span>Hibernate</span><span> || MySQL</span><span> || HTML/CSS/JS</span>
+          </div>
+        </div>
+     
+        <div style="border: 1px solid rgba(255, 255, 255, 0.262);background-color:rgba(255, 255, 255, 0.4);padding:12px;border-radius: 18px;position: relative;backdrop-filter: 1px;">
+          <div class="card">
+           
+            <div style="border: 1px solid rgba(255, 255, 255, 0.4);background-color:rgba(255, 255, 255, 0.2);border-radius: 15%;font-size: large;width: 120px;height: 120px;display:flex;justify-content:center;align-items:center;overflow: hidden;"><img src="https://www.beautiful-you.in/wp-content/uploads/2023/06/2-1.jpg"  style="width: 100%; height: 100%;">
+            
+            </div>
+            
+             <div style="text-align: center;">
+                       <h3> Mariya Sharli P</h3>
+              <p class="muted">Bangalore, Karnataka · Java Full Stack Developer</p>
+              
+                <a href="mailto:mariyasharli02@gmail.com" style="text-decoration: none;color: black;">mariyasharli02@gmail.com</a> ||
+                
+                <a href="https://www.linkedin.com/in/mariya-sharli-p" target="_blank"style="text-decoration: none;color:black">LinkedIn</a>
+           
+             </div>
+            
+          </div>
+          </div>
+       
+      </div>
+    </section>
+
+    <br><br>
+    <section id="about" class="section">
+      <div class="coon">
+        <h2 class="section-title">About</h2>
+        <div class="conn">
+        <div class="about-grid">
+          <div class="about-text">
+            <pre  style="font-size: large;font-family: 'Times New Roman', Times, serif;">I am a final-year Computer Science graduate with hands-on 
+experience in building full-stack applications using Java, 
+Spring Boot, Hibernate and front-end technologies. I enjoy
+designing maintainable backend systems and intuitive UIs.</pre>
+            <p>Strengths: Problem solving, clean code, collaborative 
+              development, quick learner.</p>
+          </div>
+
+          <br><br><br>
+          <div class="skills-card">
+            <h3 style="color: blanchedalmond;padding-left: 80px;">Skills</h3>
+            <div class="skill">
+              <div class="skill-title">Java <span class="skill-percent">90%</span></div>
+              <div class="bar"><div class="bar-fill" data-fill="90"></div></div>
+            </div>
+            <div class="skill">
+              <div class="skill-title">Spring Boot <span class="skill-percent">90%</span></div>
+              <div class="bar"><div class="bar-fill" data-fill="85"></div></div>
+            </div>
+            <div class="skill">
+              <div class="skill-title">HTML/CSS/JS <span class="skill-percent">85%</span></div>
+              <div class="bar"><div class="bar-fill" data-fill="80"></div></div>
+            </div>
+            <div class="skill" >
+              <div class="skill-title">MySQL <span class="skill-percent">90%</span></div>
+              <div class="bar"><div class="bar-fill" data-fill="78"></div></div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <b><br><br><br>
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+
+          <article class="reveal">
+            <div class="proj-tag">Web App</div>
+            <h3>Street Dog Adoption Portal</h3>
+            <p> Developed a full-stack web app using Spring Boot, JPA, Thymeleaf, and MySQL for managing dog 
+                 adoptions, sponsor, donations, and volunteering with admin CRUD operations and form approval tracking, and secure 
+                 processing using Spring Boot and MySQL</p>
+            <div class="proj-links">
+              <a class="btn btn-sm" href="https://github.com/Mariya-Sharli/Street_Dog_Adoption_Portal.git" target="_blank" style="text-decoration: none;color: blanchedalmond;border: 1px solid rgba(255, 255, 255, 0.2);padding: 10px;border-radius: 20px;">Live</a>
+              
+            </div>
+          </article>
+
+          <article class="reveal">
+            <div class="proj-tag">RESTful API</div>
+            <h3>Skill Connect REST API</h3>
+            <p> Created a Spring Boot REST API platform like LinkedIn to connect developers based on skills, projects, 
+              and experience, featuring search and filter functionality with MySQL integration. </p>
+            
+          </article>
+
+          <article class="reveal">
+            <div class="proj-tag">Deep Learning</div>
+            <h3>Localization Module for Missing Child</h3>
+            <p>Image-matching solution using deep learning to assist identification from surveillance footage.</p>
+            
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    
+
+    
+    <section id="contact" class="section contact-section">
+      <div>
+        
+        <div class="last">
+          <div class="contact-card" style="color: blanchedalmond;">
+            <h2 class="section-title" style>Contact</h2>
+            <h3>Get in touch</h3>
+            <p>Email: <a href="mailto:mariyasharli02@gmail.com" style="color: blanchedalmond;">mariyasharli02@gmail.com</a></p>
+            <p>Phone: <a href="tel:+919035279373" style="color: blanchedalmond;text-decoration: none;">+91 9035279373</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/mariya-sharli-p" target="_blank" style="color: blanchedalmond;text-decoration: none;">mariya-sharli-p</a></p>
+          </div>
+          <form class="contact-form" onsubmit="event.preventDefault(); alert('Thanks — message not actually sent in demo.');">
+            <input type="text" name="name" placeholder="Your name" required><br><br>
+            <input type="email" name="email" placeholder="Email" required><br><br>
+            <textarea  name="message" rows="5" placeholder="Message" required></textarea><br><br>
+            <button  type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <center>
+ <p style="color: blanchedalmond;">Designed & built by Mariya_Sharli• © <span id="yr"></span></p>
+    </center>
+     
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
+
