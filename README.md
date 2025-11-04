@@ -5,6 +5,7 @@ The Paws & Cares Portal is a full-stack web application designed to connect anim
 The platform streamlines animal adoption and support activities while ensuring transparency, accessibility, and user convenience.
 
 ## 🐶 Adoption Page admin and User Page
+[ https://github.com/Mariya-Sharli/Street_Dog_Adoption_Portal/tree/main/src/main/resources/static/images ]
 
  # 🌟 Key Features
  ## 👤 User Management
