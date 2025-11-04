@@ -5,13 +5,13 @@ The Paws & Cares Portal is a full-stack web application designed to connect anim
 The platform streamlines animal adoption and support activities while ensuring transparency, accessibility, and user convenience.
 
  # 🌟 Key Features
- ##👤 User Management
+ ## 👤 User Management
 
 Secure login and registration for both users and admins.
 
 Each user has personalized access to features like adoption requests, donations, and volunteering.
 
- ##🐶 Dog Adoption Module
+ ## 🐶 Dog Adoption Module
 
 Displays all available dogs for adoption, filtered by availability.
 
